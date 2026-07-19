@@ -1,0 +1,31 @@
+task,benchmark,model,provider,score,rank
+Reasoning,GPQA Diamond,Claude Sonnet 5,Anthropic,96.2,1
+Reasoning,GPQA Diamond,Claude 3 Opus,Anthropic,95.4,2
+Reasoning,GPQA Diamond,Gemini 3.1 Pro,Google,94.3,3
+Reasoning,GPQA Diamond,Claude Opus 4.7,Anthropic,94.2,4
+Reasoning,GPQA Diamond,Claude Fable 5,Anthropic,94.1,5
+Agentic coding,SWE-Bench,Claude Mythos 5,Anthropic,95.5,1
+Agentic coding,SWE-Bench,Claude Fable 5,Anthropic,95.0,2
+Agentic coding,SWE-Bench,Claude Opus 4.8,Anthropic,88.6,3
+Agentic coding,SWE-Bench,Claude Opus 4.7,Anthropic,87.6,4
+Agentic coding,SWE-Bench,Claude Sonnet 5,Anthropic,85.2,5
+Work automation,AutoBench,Claude Fable 5,Anthropic,17.4,1
+Work automation,AutoBench,Claude Opus 4.8,Anthropic,15.5,2
+Work automation,AutoBench,Claude Sonnet 5,Anthropic,13.5,3
+Work automation,AutoBench,GPT-5.5,OpenAI,12.9,4
+Work automation,AutoBench,Claude Sonnet 4.6,Anthropic,5.3,5
+Computer use,OSWorld,Claude Fable 5,Anthropic,85.0,1
+Computer use,OSWorld,Claude Opus 4.8,Anthropic,83.4,2
+Computer use,OSWorld,Claude Sonnet 5,Anthropic,81.2,3
+Computer use,OSWorld,GPT-5.5,OpenAI,78.7,4
+Computer use,OSWorld,Claude Sonnet 4.6,Anthropic,78.5,5
+Browsing,BrowseComp,Claude Fable 5,Anthropic,88.0,1
+Browsing,BrowseComp,DeepSeek V4 Flash,DeepSeek,85.9,2
+Browsing,BrowseComp,Gemini 3.1 Pro,Google,85.9,3
+Browsing,BrowseComp,Claude Sonnet 5,Anthropic,84.7,4
+Browsing,BrowseComp,GPT-5.5,OpenAI,84.4,5
+Terminal use,Terminal-Bench 2.1,Claude Mythos 5,Anthropic,88.0,1
+Terminal use,Terminal-Bench 2.1,Claude Fable 5,Anthropic,84.3,2
+Terminal use,Terminal-Bench 2.1,GPT-5.5,OpenAI,82.7,3
+Terminal use,Terminal-Bench 2.1,GLM 5.2,Zhipu AI,81.0,4
+Terminal use,Terminal-Bench 2.1,Claude Sonnet 5,Anthropic,80.4,5

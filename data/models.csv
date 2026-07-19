@@ -1,0 +1,16 @@
+model,provider,hle,context,input_cost,output_cost,speed,latency
+Claude Mythos 5,Anthropic,64.5,1000000,10,50,,
+Claude Opus 4.8,Anthropic,57.9,1000000,5,25,64.8,32.1
+Claude Sonnet 5,Anthropic,57.4,1000000,3,15,56.3,20.69
+GLM 5.2,Zhipu AI,54.7,1000000,0.95,3,347,1.14
+Kimi K2.6,Moonshot AI,54.0,256000,0.95,4,342.6,0.68
+DeepSeek V4 Flash,DeepSeek,51.6,1000000,0.14,0.28,107.9,1.42
+DeepSeek V4 Pro,DeepSeek,48.2,1000000,0.435,0.87,174.9,1.2
+Gemini 3 Pro,Google,45.8,,,,,
+Kimi K2 Thinking,Moonshot AI,44.9,,,,,
+Gemini 3.1 Pro,Google,44.4,1000000,2,12,136.2,20.34
+GPT-5.5 Pro,OpenAI,43.1,1000000,30,180,,
+GPT-5.5,OpenAI,41.4,1000000,5,30,79,76.69
+Gemini 3.5 Flash,Google,40.2,1000000,1.5,9,175.4,23.16
+Claude Opus 4.6,Anthropic,40.0,200000,5,25,67,1.6
+GPT-5,OpenAI,35.2,,,,,
