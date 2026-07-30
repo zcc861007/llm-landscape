@@ -10,7 +10,7 @@ This is a three-scene interactive slideshow built with D3.js. It compares leadin
 ### 1. Open a terminal and enter the project directory
 
 ```bash
-cd "/Users/czp3317/Library/CloudStorage/OneDrive-Loves/MyDoc/UIUC Master/CS416 Data Visualization/Projects/Proj2_Narrative_Vis/interactive-web"
+cd "path-to-repo"
 ```
 
 ### 2. Start a local web server

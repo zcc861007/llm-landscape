@@ -27,7 +27,7 @@ The essay is normally submitted separately to the course. If you commit `essay.d
 Opening `index.html` by double-clicking it will not load the CSV files because browsers restrict `file://` requests. Start a small local HTTP server instead:
 
 ```bash
-cd "/Users/czp3317/Library/CloudStorage/OneDrive-Loves/MyDoc/UIUC Master/CS416 Data Visualization/Projects/Proj2_Narrative_Vis/interactive-web"
+cd "path-to-repo"
 python3 -m http.server 8000
 ```
 
