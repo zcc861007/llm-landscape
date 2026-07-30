@@ -10,7 +10,7 @@ This is a three-scene interactive slideshow built with D3.js. It compares leadin
 ### 1. Open a terminal and enter the project directory
 
 ```bash
-cd "path-to-repo"
+cd "llm-landscape"
 ```
 
 ### 2. Start a local web server
@@ -88,7 +88,7 @@ See [DEPLOY.md](DEPLOY.md) for complete publishing instructions.
 ## Project Files
 
 ```text
-interactive-web/
+llm-landscape/
 ├── index.html          # Website entry point
 ├── styles.css          # Page styling and responsive layout
 ├── js/app.js           # D3 charts, parameters, and interactions

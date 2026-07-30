@@ -7,7 +7,7 @@ This project is already a static site. It has no build step, package manager, AP
 Keep this structure at the top level of the repository:
 
 ```text
-interactive-web/
+llm-landscape/
 ├── index.html
 ├── styles.css
 ├── js/
@@ -27,7 +27,7 @@ The essay is normally submitted separately to the course. If you commit `essay.d
 Opening `index.html` by double-clicking it will not load the CSV files because browsers restrict `file://` requests. Start a small local HTTP server instead:
 
 ```bash
-cd "path-to-repo"
+cd "llm-landscape"
 python3 -m http.server 8000
 ```
 
@@ -113,7 +113,7 @@ Each push to `main` republishes the root automatically. Watch the **pages build 
 ### The site returns 404
 
 - Confirm that Pages is set to `main` and `/(root)`.
-- Confirm that `index.html` is in the repository root, not inside another `interactive-web` directory.
+- Confirm that `index.html` is in the repository root, not inside another `llm-landscape` directory.
 - Use the project URL including the repository segment: `https://YOUR-USERNAME.github.io/llm-landscape/`.
 - Check the Pages deployment run in **Actions** for an error.
 
