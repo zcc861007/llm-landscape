@@ -93,8 +93,6 @@ llm-landscape/
 ├── styles.css          # Page styling and responsive layout
 ├── js/app.js           # D3 charts, parameters, and interactions
 ├── data/               # Local data snapshot
-├── essay.docx          # Course essay in Word format
-├── essay.md            # Editable Markdown essay
 ├── DEPLOY.md           # GitHub Pages deployment guide
 └── README.md           # Local setup and usage guide
 ```
