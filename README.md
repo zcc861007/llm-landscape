@@ -1,4 +1,7 @@
-# No Single Finish Line
+# LLM LEADERBOARD STORY - No Single Finish Line
+### CS 416 Data Visualization — Narrative Visualization Project
+
+**Author**: Chaochao Zhou (cz76@illinois.edu)
 
 This is a three-scene interactive slideshow built with D3.js. It compares leading LLMs by overall performance, task-specific benchmarks, and API price.
 
