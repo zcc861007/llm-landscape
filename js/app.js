@@ -22,7 +22,6 @@
       eyebrow: "General benchmark",
       chartTitle: "Humanity’s Last Exam score",
       caption: "Top 10 models; hover or focus a bar to see its provider and score.",
-      note: "<strong>Annotation</strong>The leader is 6.6 percentage points ahead of second place.",
       render: renderOverall
     },
     {
@@ -34,7 +33,6 @@
       eyebrow: "Specialist benchmarks",
       chartTitle: "Reasoning · GPQA Diamond",
       caption: "Scores should be compared within one benchmark, not between different benchmarks.",
-      note: "<strong>Annotation</strong>The callout changes with the selected task and always identifies its winner.",
       render: renderTasks
     },
     {
@@ -46,7 +44,6 @@
       eyebrow: "Performance and cost",
       chartTitle: "HLE score vs. output price",
       caption: "The price axis is logarithmic because displayed model prices cover a very wide range. Prices are USD per 1M tokens.",
-      note: "<strong>Annotation</strong>DeepSeek V4 Flash keeps a 51.6% HLE score at a comparatively low displayed price.",
       render: renderPrice
     }
   ];
@@ -66,7 +63,6 @@
     title: d3.select("#scene-title"),
     deck: d3.select("#scene-deck"),
     controls: d3.select("#scene-controls"),
-    note: d3.select("#scene-note"),
     eyebrow: d3.select("#chart-eyebrow"),
     chartTitle: d3.select("#chart-title"),
     legend: d3.select("#chart-legend"),
@@ -183,7 +179,6 @@
     elements.kicker.text(scene.kicker);
     elements.title.text(scene.title);
     elements.deck.text(scene.deck);
-    elements.note.html(scene.note);
     elements.eyebrow.text(scene.eyebrow);
     elements.chartTitle.text(scene.chartTitle);
     elements.caption.text(scene.caption);

@@ -298,22 +298,6 @@ a:focus-visible {
   background: var(--blue);
 }
 
-.scene-note {
-  margin-top: auto;
-  padding: 12px;
-  border-left: 4px solid var(--red);
-  color: var(--muted);
-  background: var(--surface);
-  font-size: 15px;
-  line-height: 1.45;
-}
-
-.scene-note strong {
-  display: block;
-  margin-bottom: 3px;
-  color: var(--text);
-}
-
 .chart-header {
   display: flex;
   flex: 0 0 64px;
@@ -641,8 +625,7 @@ kbd {
     margin: 0;
   }
 
-  .control-label,
-  .scene-note {
+  .control-label {
     display: none;
   }
 
