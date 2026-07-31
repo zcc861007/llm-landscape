@@ -3,7 +3,7 @@
 
 **Author**: Chaochao Zhou (cz76@illinois.edu)
 
-This is a three-scene interactive slideshow built with D3.js. It compares leading LLMs by overall performance, task-specific benchmarks, and API price.
+This is a three-scene interactive slideshow built with D3.js. It compares leading LLMs by overall performance, task-specific benchmarks, and API price. The visual theme uses a high-contrast dark brown canvas with orange accents and white foreground text.
 
 ## Run Locally
 
@@ -26,6 +26,8 @@ Serving HTTP on ... port 8000
 ```
 
 Keep this terminal window open while using the website.
+
+If port `8000` is already in use, choose another free port, such as `8002`, and use that same port in the browser URL. Stop the server with `Control-C` when finished so the port is released.
 
 ### 3. Open the website
 

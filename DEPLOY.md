@@ -1,6 +1,6 @@
 # Deploying the LLM narrative to GitHub Pages
 
-This project is already a static site. It has no build step, package manager, API key, or server-side code. GitHub Pages can publish it directly from the repository root.
+This project is already a static site. It has no build step, package manager, API key, or server-side code. GitHub Pages can publish it directly from the repository root. The dark brown and orange visual theme is contained in `styles.css`, with matching chart colors in `js/app.js`.
 
 ## What will be published
 
@@ -32,6 +32,8 @@ python3 -m http.server 8000
 ```
 
 Open <http://localhost:8000/>. Test all three slides, the three task buttons, the input/output-price toggle, and at least one tooltip. Stop the server with `Control-C`.
+
+If port `8000` is occupied, start the preview on another free port and open the matching localhost URL.
 
 ## 2. Create a GitHub repository
 
@@ -88,6 +90,7 @@ No custom GitHub Actions workflow is needed because this project has no build st
 Open the exact Pages URL shown in Settings and check:
 
 - the title reads “One test has one leader”;
+- the page uses the dark brown canvas, orange accents, and white foreground text;
 - the overall-ranking bars extend to their labeled values;
 - the task selector changes both the chart title and winner annotation;
 - the price selector changes the horizontal positions and axis label;

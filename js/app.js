@@ -2,14 +2,15 @@
   "use strict";
 
   const COLORS = {
-    blue: "#2563eb",
-    blueLight: "#bfdbfe",
-    red: "#ef4444",
-    green: "#0f766e",
-    text: "#1f2937",
-    muted: "#64748b",
-    border: "#d7dee8"
+    blue: "#f6c177",
+    blueLight: "#d59b6a",
+    red: "#ff7a1a",
+    green: "#f6c177",
+    text: "#fff7ed",
+    muted: "#f0c9aa",
+    border: "#6f432c"
   };
+  const ANNOTATION_BOX_HEIGHT = 58;
 
   const scenes = [
     {
@@ -263,8 +264,8 @@
     const boxWidth = mobile ? 140 : 155;
     const noteX = mobile ? Math.max(4, innerWidth - boxWidth) : innerWidth + 20;
     const noteY = mobile
-      ? Math.min(innerHeight - 52, anchorY + y.bandwidth() + 14)
-      : Math.min(innerHeight - 52, anchorY + 18);
+      ? Math.min(innerHeight - ANNOTATION_BOX_HEIGHT - 4, anchorY + y.bandwidth() + 14)
+      : Math.min(innerHeight - ANNOTATION_BOX_HEIGHT - 4, anchorY + 18);
     addAnnotation(g, anchorX, anchorY, noteX, noteY, "6.6-point lead", "over second place", boxWidth);
   }
 
@@ -330,7 +331,7 @@
       .attr("x2", d => x(d.score))
       .attr("y1", y.bandwidth() / 2)
       .attr("y2", y.bandwidth() / 2)
-      .attr("stroke", d => d.rank === 1 ? "#fecaca" : COLORS.blueLight)
+      .attr("stroke", d => d.rank === 1 ? "#ffbf87" : COLORS.blueLight)
       .attr("stroke-width", 6)
       .attr("stroke-linecap", "round");
 
@@ -342,10 +343,10 @@
 
     rows.append("text")
       .attr("class", "svg-micro")
-      .attr("x", d => d.rank === 1 ? x(d.score) - 10 : x(d.score) + 9)
-      .attr("y", y.bandwidth() / 2)
-      .attr("dy", "0.35em")
-      .attr("text-anchor", d => d.rank === 1 ? "end" : "start")
+      .attr("x", d => d.rank === 1 ? x(d.score) : x(d.score) + 9)
+      .attr("y", d => d.rank === 1 ? y.bandwidth() / 2 - 13 : y.bandwidth() / 2)
+      .attr("dy", d => d.rank === 1 ? "0" : "0.35em")
+      .attr("text-anchor", d => d.rank === 1 ? "middle" : "start")
       .text(d => d3.format(".1f")(d.score));
 
     const winner = data[0];
@@ -354,8 +355,8 @@
     const boxWidth = mobile ? 145 : 170;
     const noteX = mobile ? Math.max(4, innerWidth - boxWidth) : innerWidth + 20;
     const noteY = mobile
-      ? Math.min(innerHeight - 52, anchorY + y.bandwidth() + 18)
-      : Math.min(innerHeight - 52, anchorY + 18);
+      ? Math.min(innerHeight - ANNOTATION_BOX_HEIGHT - 4, anchorY + y.bandwidth() + 18)
+      : Math.min(innerHeight - ANNOTATION_BOX_HEIGHT - 4, anchorY + 18);
     addAnnotation(g, anchorX, anchorY, noteX, noteY, `${winner.model} wins`, `${d3.format(".1f")(winner.score)}% on ${benchmark}`, boxWidth);
   }
 
@@ -448,7 +449,7 @@
       .append("text")
       .attr("class", "svg-micro")
       .attr("x", 8)
-      .attr("y", -8)
+      .attr("y", d => d.model === highlighted ? 22 : -8)
       .text(d => d.model);
 
     const point = data.find(d => d.model === highlighted);
@@ -471,7 +472,7 @@
   }
 
   function addAnnotation(g, anchorX, anchorY, boxX, boxY, title, copy, boxWidth = 160) {
-    const boxHeight = 48;
+    const boxHeight = ANNOTATION_BOX_HEIGHT;
     const boxIsRight = boxX >= anchorX;
     const edgeX = boxIsRight ? boxX : boxX + boxWidth;
     const edgeY = boxY + boxHeight / 2;
@@ -499,12 +500,12 @@
     box.append("text")
       .attr("class", "annotation-title")
       .attr("x", boxX + 9)
-      .attr("y", boxY + 17)
+      .attr("y", boxY + 21)
       .text(title);
     box.append("text")
       .attr("class", "annotation-copy")
       .attr("x", boxX + 9)
-      .attr("y", boxY + 33)
+      .attr("y", boxY + 41)
       .text(copy);
     box.append("line")
       .attr("class", "annotation-box-rule")
